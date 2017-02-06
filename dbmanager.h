@@ -5,24 +5,27 @@
 #include <QVariant>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
+//why not?
 #include <QDateTime>
-#include <QVariant>
-#include <iostream>
+#include <QDate>
 
-//TODO make this feel lonely
+//This class was supposed to be a singleton, but I'm confused in architecture
+//and I am afraid to break something
 class DBManager
 {
 public:
     DBManager();
     ~DBManager();
-    void addWorker(QString name, QString date, int salary);
-    void addSubordinate(int superior_id, int subordinate_id);
-    QSqlQuery getWorker(QString name);
-    QSqlQuery getSubordinate(int superiorID);
+    DBManager getInstance();
+    void addWorker(QString name, int year, int month, int day, double salary, QString wType);
+    void addSubordinate(QString superior, QString subordinate);
+    QSqlQuery getWorker(QString name) const;
+    QSqlQuery getWorker(int id) const;
+    QSqlQuery getSubordinate(int superiorID) const;
 
 private:
     QSqlDatabase db;
-    static DBManager *instance;
 };
+
 
 #endif // DBMANAGER_H
