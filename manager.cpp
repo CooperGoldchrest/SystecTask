@@ -62,8 +62,7 @@ void Manager::getSubsSalary(int workerID)
     {
         int subordinate_id = query.value(1).toInt();
         QSqlQuery worker = db->getWorker(subordinate_id);
-        worker.next();
-        QString workerType = worker.value(6).toString();
+        worker.next();QString workerType = worker.value(6).toString();
         if(workerType == "employee")
         {
             subSalary += worker.value(5).toDouble();
