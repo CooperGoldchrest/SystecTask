@@ -1,5 +1,4 @@
 #include "dbmanager.h"
-#include <iostream>
 
 DBManager::DBManager()
 {

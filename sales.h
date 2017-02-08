@@ -1,10 +1,9 @@
 #ifndef SALES_H
 #define SALES_H
 
-#include "dbmanager.h"
-#include <iostream>
+#include "iworker.h"
 
-class Sales
+class Sales : public IWorker
 {
 public:
     Sales();

@@ -1,9 +1,9 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
 
-#include "dbmanager.h"
+#include "iworker.h"
 
-class Employee
+class Employee : public IWorker
 {
 public:
     Employee();

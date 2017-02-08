@@ -1,9 +1,9 @@
 #ifndef MANAGER_H
 #define MANAGER_H
 
-#include "dbmanager.h"
+#include "iworker.h"
 
-class Manager
+class Manager : public IWorker
 {
 public:
     Manager();

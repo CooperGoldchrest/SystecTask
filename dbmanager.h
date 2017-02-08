@@ -5,10 +5,6 @@
 #include <QVariant>
 #include <QtSql/QSqlDatabase>
 #include <QtSql/QSqlQuery>
-//why not?
-#include <QDateTime>
-#include <QDate>
-
 //This class was supposed to be a singleton, but I'm confused in architecture
 //and I am afraid to break something
 class DBManager
